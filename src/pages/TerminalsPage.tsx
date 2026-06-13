@@ -84,6 +84,23 @@ const terminals = [
     contact: { phone: '+3197010257780', email: 'booking@tankspeedterminals.eu' },
     icons: [Ship, Truck],
   },
+  {
+    id: 'ningbo',
+    name: 'Ningbo-Zhoushan',
+    country: 'China',
+    flag: '🇨🇳',
+    role: 'Subleased Terminal',
+    address: 'Ningbo-Zhoushan Port, Zhejiang Province, China',
+    region: "World's Busiest Port by Cargo",
+    capacity: '450,000+ m³',
+    berths: '3 berths (VLCC capable)',
+    products: ['Crude Oil', 'Fuel Oil', 'Diesel', 'LNG', 'Petrochemicals', 'Bitumen'],
+    connectivity: ['VLCC deep-water berths', 'Zhoushan crude oil pipeline network', 'Coastal feeder & barge access', 'Road tanker loading bays'],
+    services: ['Crude Oil Storage', 'Product Blending', 'Pipeline Transfer', 'Inspection Services'],
+    image: jurongImg,
+    contact: { phone: '+3197010257780', email: 'logistics@tankspeedterminals.eu' },
+    icons: [Ship, GitBranch, Truck],
+  },
 ]
 
 const terminalFAQs: FAQItem[] = [
@@ -108,6 +125,11 @@ const terminalFAQs: FAQItem[] = [
       'Yes. Our Fujairah terminal is a key Middle East bunkering and storage hub with 550,000+ m³ capacity. Located at Port of Fujairah, UAE, it specialises in VLSFO, HSFO bunker fuel, crude oil, and diesel with VLCC-capable deep-water berths.',
   },
   {
+    question: 'Do you have oil storage in Ningbo-Zhoushan, China?',
+    answer:
+      'Yes. Our Ningbo-Zhoushan terminal operates at the world\'s busiest port by cargo throughput in Zhejiang Province, China. We offer 450,000+ m³ of subleased bulk liquid storage capacity for crude oil, fuel oil, diesel, LNG, petrochemicals, and bitumen, with VLCC-capable deep-water berths and direct access to the Zhoushan crude oil pipeline network. Contact logistics@tankspeedterminals.eu for China storage enquiries.',
+  },
+  {
     question: 'How do I contact your oil tank farm for a storage quote?',
     answer:
       'Call +31 970 102 57780 (Vopak Logistics Services Permis) or +31 68 538 6858 (General Tank Speed BV), or email info@tankspeedterminals.eu. You can also use the quote form on this page. Our commercial team responds within 24 hours with capacity availability and indicative pricing.',
@@ -115,7 +137,7 @@ const terminalFAQs: FAQItem[] = [
   {
     question: 'What is the total storage capacity across your terminal network?',
     answer:
-      'Our combined terminal network offers over 2.5 million m³ of bulk liquid storage across Rotterdam (850,000+ m³), Jurong (600,000+ m³), Fujairah (550,000+ m³), and Houston (500,000+ m³). We can accommodate large-volume, multi-location storage agreements.',
+      'Our combined terminal network offers over 3 million m³ of bulk liquid storage across Rotterdam (850,000+ m³), Jurong (600,000+ m³), Fujairah (550,000+ m³), Houston (500,000+ m³), and Ningbo-Zhoushan (450,000+ m³). We can accommodate large-volume, multi-location storage agreements.',
   },
 ]
 
@@ -179,6 +201,17 @@ const localBusinessesSchema = {
         url: 'https://www.tankspeedterminals.eu/terminals',
       },
     },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      item: {
+        '@type': 'LocalBusiness',
+        name: 'TankSpeed Terminals Ningbo-Zhoushan — Oil Storage China',
+        address: { '@type': 'PostalAddress', addressLocality: 'Ningbo-Zhoushan', addressRegion: 'Zhejiang', addressCountry: 'CN' },
+        geo: { '@type': 'GeoCoordinates', latitude: '29.8683', longitude: '122.1697' },
+        url: 'https://www.tankspeedterminals.eu/terminals',
+      },
+    },
   ],
 }
 
@@ -189,9 +222,9 @@ export default function TerminalsPage() {
   return (
     <>
       <SEOHead
-        title="Oil Terminals in Rotterdam, Houston, Jurong & Fujairah | TankSpeed Terminals"
-        description="Explore our oil tank farms and terminals in Rotterdam, Houston, Jurong and Fujairah. View tank capacity, products handled and connectivity. Reserve storage now."
-        keywords="oil terminal Rotterdam, list of oil tank farms Rotterdam, oil tank farm Houston, list of oil tank farms Houston, oil storage company Jurong, oil storage company Fujairah, oil terminal in Rotterdam"
+        title="Oil Terminals in Rotterdam, Houston, Jurong, Fujairah & Ningbo-Zhoushan | TankSpeed Terminals"
+        description="Explore our oil tank farms in Rotterdam, Houston, Jurong, Fujairah and Ningbo-Zhoushan Port. View tank capacity, products handled and connectivity. Reserve storage now."
+        keywords="oil terminal Rotterdam, list of oil tank farms Rotterdam, oil tank farm Houston, oil storage company Jurong, oil storage company Fujairah, oil storage Ningbo-Zhoushan, China oil terminal, Ningbo oil storage, oil terminal China"
         path="/terminals"
         schema={[terminalsFAQSchema, localBusinessesSchema]}
       />
@@ -200,8 +233,8 @@ export default function TerminalsPage() {
 
       <PageHero
         label="Our Global Network"
-        title="Oil Tank Farms in Rotterdam, Houston, Jurong & Fujairah"
-        subtitle="Primary terminal operations at Port of Rotterdam with subleased facilities in Houston, Jurong, and Fujairah — covering every major petroleum trading corridor."
+        title="Oil Tank Farms in Rotterdam, Houston, Jurong, Fujairah & Ningbo-Zhoushan"
+        subtitle="Primary terminal operations at Port of Rotterdam with subleased facilities in Houston, Jurong, Fujairah, and Ningbo-Zhoushan — covering every major petroleum trading corridor worldwide."
         image="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80"
       />
 
@@ -365,8 +398,8 @@ export default function TerminalsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="Tank Farm Directory"
-            title="List of Oil Tank Farms — Rotterdam & Houston"
-            subtitle="A structured overview of our terminal facilities available for bulk liquid storage rental and leasing."
+            title="List of Oil Tank Farms — Global Network"
+            subtitle="A structured overview of our terminal facilities available for bulk liquid storage rental and leasing across five strategic locations."
             center
           />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
@@ -457,13 +490,39 @@ export default function TerminalsPage() {
                 Enquire About Fujairah Terminal <ArrowRight size={14} />
               </Link>
             </article>
+
+            {/* Ningbo-Zhoushan */}
+            <article className="card-glass rounded-xl p-6 lg:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl" role="img" aria-label="China">🇨🇳</span>
+                <div>
+                  <h2 className="font-heading font-bold text-text-primary text-xl">Oil Storage in Ningbo-Zhoushan, China</h2>
+                  <p className="text-gold text-xs font-heading font-semibold uppercase tracking-wider">Subleased Terminal — World's Busiest Port by Cargo</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-text-muted text-sm mb-5">
+                <ul className="space-y-2">
+                  <li><span className="text-gold font-semibold">Location:</span> Ningbo-Zhoushan Port, Zhejiang Province, China</li>
+                  <li><span className="text-gold font-semibold">Capacity:</span> 450,000+ m³ bulk liquid storage</li>
+                  <li><span className="text-gold font-semibold">Products:</span> Crude Oil, Fuel Oil, Diesel, LNG, Petrochemicals, Bitumen</li>
+                </ul>
+                <ul className="space-y-2">
+                  <li><span className="text-gold font-semibold">Berths:</span> 3 berths (VLCC capable)</li>
+                  <li><span className="text-gold font-semibold">Connectivity:</span> Zhoushan crude oil pipeline network, deep-water VLCC berths, coastal feeder &amp; barge access</li>
+                  <li><span className="text-gold font-semibold">Services:</span> Crude oil storage, blending, pipeline transfer, inspection services</li>
+                </ul>
+              </div>
+              <Link to="/request-quote" className="btn-primary text-sm">
+                Enquire About Ningbo-Zhoushan Terminal <ArrowRight size={14} />
+              </Link>
+            </article>
           </div>
         </div>
       </section>
 
       <FAQAccordion
         faqs={terminalFAQs}
-        title="Oil Tank Farm Questions — Rotterdam, Houston, Jurong & Fujairah"
+        title="Oil Tank Farm Questions — Rotterdam, Houston, Jurong, Fujairah & Ningbo-Zhoushan"
         label="Terminal FAQ"
       />
       <LeadCaptureForm />

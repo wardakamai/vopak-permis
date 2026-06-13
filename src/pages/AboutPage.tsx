@@ -28,6 +28,11 @@ const timeline = [
     description: 'Entry into the UAE bunker fuel market with subleased storage at Port of Fujairah, one of the world\'s most important bunkering centers.',
   },
   {
+    year: '2023',
+    title: 'Ningbo-Zhoushan — China',
+    description: 'Strategic expansion into China through a subleased terminal at Ningbo-Zhoushan Port — the world\'s busiest port by cargo throughput — establishing a key presence in the East Asian energy market.',
+  },
+  {
     year: '2015',
     title: 'ISO 14001 & ISO 45001 Certification',
     description: 'Formal certification of environmental and occupational health & safety management systems across all terminal operations.',
@@ -103,14 +108,14 @@ export default function AboutPage() {
                   between <span className="text-gold font-semibold">Vopak Logistics Services Permis</span> and{' '}
                   <span className="text-gold font-semibold">General Tank Speed BV</span>. Both companies
                   share a singular goal: to make storage and logistics operations in the Port of Rotterdam,
-                  Houston, Jurong (Singapore), and Fujairah (UAE) seamless for oil and gas buyers and sellers.
+                  Houston, Jurong (Singapore), Fujairah (UAE), and Ningbo-Zhoushan (China) seamless for oil and gas buyers and sellers.
                 </p>
                 <p className="text-text-muted leading-relaxed">
                   Vopak Logistics Services Permis acts as the primary terminal operator, managing the
                   day-to-day operations of storage tanks, quality control, pipeline connectivity, and
                   regulatory compliance at each terminal location. With a primary base at the
-                  Maasvlakte, Rotterdam, the company subleases terminal capacity at Houston, Jurong, and
-                  Fujairah to ensure clients receive consistent service standards globally.
+                  Maasvlakte, Rotterdam, the company subleases terminal capacity at Houston, Jurong,
+                  Fujairah, and Ningbo-Zhoushan to ensure clients receive consistent service standards globally.
                 </p>
                 <p className="text-text-muted leading-relaxed">
                   General Tank Speed BV complements the offering through specialized courier delivery
@@ -130,7 +135,7 @@ export default function AboutPage() {
                   role: 'Primary Terminal Operator',
                   points: [
                     'Primary storage operations, Port of Rotterdam',
-                    'Subleased terminals: Houston, Jurong, Fujairah',
+                    'Subleased terminals: Houston, Jurong, Fujairah, Ningbo-Zhoushan',
                     'Pipeline connectivity and product transfer',
                     'Quality control, blending and heating services',
                     'Regulatory compliance and HSE management',
@@ -272,7 +277,7 @@ export default function AboutPage() {
               <Globe size={36} className="text-gold mx-auto mb-4" />
               <h3 className="font-heading font-bold text-xl text-text-primary mb-3">Our Reach</h3>
               <p className="text-text-muted text-sm leading-relaxed">
-                Four strategic terminals on three continents ensure that wherever our clients operate
+                Five strategic terminals on four continents ensure that wherever our clients operate
                 in the global energy supply chain, TankSpeed Terminals can provide local expertise
                 backed by global resources and consistent service standards.
               </p>
@@ -332,12 +337,13 @@ export default function AboutPage() {
       <section className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="Global Presence" title="Strategically Located Terminals" center />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
             {[
               { city: 'Rotterdam', country: 'Netherlands', flag: '🇳🇱', role: 'Primary', note: 'Maasvlakte, Haven 300' },
               { city: 'Houston', country: 'United States', flag: '🇺🇸', role: 'Sublease', note: 'Gulf Coast operations' },
               { city: 'Jurong', country: 'Singapore', flag: '🇸🇬', role: 'Sublease', note: 'Asia-Pacific hub' },
               { city: 'Fujairah', country: 'UAE', flag: '🇦🇪', role: 'Sublease', note: 'Middle East bunkering' },
+              { city: 'Ningbo-Zhoushan', country: 'China', flag: '🇨🇳', role: 'Sublease', note: "World's busiest port" },
             ].map((loc, i) => (
               <motion.div
                 key={loc.city}

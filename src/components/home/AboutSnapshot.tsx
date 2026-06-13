@@ -24,7 +24,7 @@ export default function AboutSnapshot() {
             >
               Headquartered at the Port of Rotterdam — Europe's largest and busiest port —
               our joint venture operates primary storage at Maasvlakte with subleased terminals
-              in Houston (Gulf Coast), Jurong (Singapore), and Fujairah (UAE). Together, we
+              in Houston (Gulf Coast), Jurong (Singapore), Fujairah (UAE), and Ningbo-Zhoushan (China). Together, we
               offer seamless end-to-end service from tank rental and product blending to
               vessel chartering and cross-terminal freight logistics.
             </motion.p>
@@ -48,7 +48,7 @@ export default function AboutSnapshot() {
                 name: 'Vopak Logistics Services Permis',
                 role: 'Primary Terminal Operator',
                 description:
-                  'Specialist storage and terminal operator at Port of Rotterdam. Manages primary storage tanks and coordinates subleased terminals in Houston, Jurong, and Fujairah.',
+                  'Specialist storage and terminal operator at Port of Rotterdam. Manages primary storage tanks and coordinates subleased terminals in Houston, Jurong, Fujairah, and Ningbo-Zhoushan (China).',
                 accent: true,
               },
               {

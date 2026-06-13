@@ -20,7 +20,7 @@ const homeFAQs: FAQItem[] = [
   {
     question: 'Do you have oil tank farms in Houston and other locations?',
     answer:
-      'Yes. In addition to our primary oil tank farm in Rotterdam, we operate subleased terminals in Houston (Gulf Coast), Jurong (Singapore), and Fujairah (UAE), covering every major petroleum trading corridor. Storage capacity exceeds 2.5 million m³ across all locations.',
+      'Yes. In addition to our primary oil tank farm in Rotterdam, we operate subleased terminals in Houston (Gulf Coast), Jurong (Singapore), Fujairah (UAE), and Ningbo-Zhoushan (China) — covering every major petroleum trading corridor. Combined storage capacity exceeds 3 million m³ across all locations.',
   },
   {
     question: 'What products can be stored at your Rotterdam terminal?',
@@ -33,9 +33,9 @@ const homeFAQs: FAQItem[] = [
       'You can request a quote online, email info@tankspeedterminals.eu, or call +31 970 102 57780 (Vopak Logistics Services Permis) or +31 68 538 6858 (General Tank Speed BV). Our team responds to all storage enquiries within 24 business hours.',
   },
   {
-    question: 'Do you offer oil storage in Jurong and Fujairah?',
+    question: 'Do you offer oil storage in Jurong, Fujairah and Ningbo-Zhoushan?',
     answer:
-      'Yes. Our Jurong terminal on Jurong Island, Singapore serves the Asia-Pacific market with 600,000+ m³ capacity, while our Fujairah terminal in the UAE is a key Middle East bunkering and storage hub with 550,000+ m³ capacity. Both facilities handle fuel oil, diesel, and crude oil.',
+      'Yes. Our Jurong terminal (Singapore) serves the Asia-Pacific market with 600,000+ m³ capacity. Our Fujairah terminal (UAE) is a key Middle East bunkering hub with 550,000+ m³. Our Ningbo-Zhoushan terminal at the world\'s busiest port in China offers 450,000+ m³ for crude oil, fuel oil, LNG, and petrochemicals. All three facilities are available for storage rental.',
   },
   {
     question: 'What is the minimum storage volume and contract length?',
@@ -51,7 +51,7 @@ const organizationSchema = {
   url: 'https://www.tankspeedterminals.eu',
   logo: 'https://www.tankspeedterminals.eu/favicon.png',
   description:
-    'Joint venture oil tank farm and bulk liquid storage terminal operator at Port of Rotterdam with global terminals in Houston, Jurong, and Fujairah.',
+    'Joint venture oil tank farm and bulk liquid storage terminal operator at Port of Rotterdam with global terminals in Houston, Jurong, Fujairah, and Ningbo-Zhoushan.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '17 Buraanweg Haven 300',
@@ -61,7 +61,7 @@ const organizationSchema = {
   },
   telephone: ['+3197010257780', '+31685386858'],
   email: 'info@tankspeedterminals.eu',
-  areaServed: ['Netherlands', 'USA', 'Singapore', 'UAE'],
+  areaServed: ['Netherlands', 'USA', 'Singapore', 'UAE', 'China'],
   contactPoint: [
     {
       '@type': 'ContactPoint',

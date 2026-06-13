@@ -28,9 +28,9 @@ const storageFAQs: FAQItem[] = [
       'Our Rotterdam oil tank farm handles crude oil, diesel EN 590, Jet A1 aviation fuel, D6 fuel oil, biofuels, petrochemicals, and blended products. Tanks are equipped with heating, nitrogen blanketing, and vapor recovery to meet product-specific storage requirements.',
   },
   {
-    question: 'Do you offer tank storage in Houston, Jurong, or Fujairah?',
+    question: 'Do you offer tank storage in Houston, Jurong, Fujairah or Ningbo-Zhoushan?',
     answer:
-      'Yes. In addition to our primary Rotterdam oil tank farm, we provide bulk liquid storage through subleased terminals in Houston (Gulf Coast), Jurong Island (Singapore), and Fujairah (UAE). Contact us specifying your preferred location and we will match you with the right facility.',
+      'Yes. In addition to our primary Rotterdam oil tank farm, we provide bulk liquid storage through subleased terminals in Houston (Gulf Coast), Jurong Island (Singapore), Fujairah (UAE), and Ningbo-Zhoushan Port (China). Contact us specifying your preferred location and we will match you with the right facility.',
   },
   {
     question: 'How quickly can I get a storage quote?',

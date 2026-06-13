@@ -57,6 +57,19 @@ const terminals = [
     x: '62%',
     y: '40%',
   },
+  {
+    id: 'ningbo',
+    name: 'Ningbo-Zhoushan',
+    country: 'China',
+    region: 'East Asia',
+    role: 'Subleased Terminal',
+    capacity: '450,000+ m³',
+    products: ['Crude Oil', 'Fuel Oil', 'Diesel', 'LNG', 'Petrochemicals'],
+    address: 'Ningbo-Zhoushan Port, Zhejiang, China',
+    connectivity: 'Pipeline, Vessel, Barge',
+    x: '81%',
+    y: '34%',
+  },
 ]
 
 export default function TerminalsMap() {
@@ -67,8 +80,8 @@ export default function TerminalsMap() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="Global Network"
-          title="Four Strategic Terminal Locations"
-          subtitle="Our terminal network spans four of the world's most critical energy hubs, giving clients access to storage, blending, and logistics services in Europe, the Americas, Asia-Pacific, and the Middle East."
+          title="Five Strategic Terminal Locations"
+          subtitle="Our terminal network spans five of the world's most critical energy hubs, giving clients access to storage, blending, and logistics services in Europe, the Americas, Asia-Pacific, the Middle East, and China."
         />
 
         <div className="mt-12 relative">

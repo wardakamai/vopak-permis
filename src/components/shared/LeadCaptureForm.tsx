@@ -149,6 +149,7 @@ export default function LeadCaptureForm() {
                     <option>Houston, USA</option>
                     <option>Jurong, Singapore</option>
                     <option>Fujairah, UAE</option>
+                    <option>Ningbo-Zhoushan, China</option>
                     <option>No preference</option>
                   </select>
                 </div>
