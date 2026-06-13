@@ -67,12 +67,17 @@ export default function Footer() {
               <p className="text-gold text-xs font-heading font-semibold uppercase tracking-widest mb-2">
                 General Tank Speed BV
               </p>
-              <div className="flex items-center gap-2 text-text-muted text-sm">
+              <div className="flex items-start gap-2 text-text-muted text-sm mb-1">
+                <MapPin size={14} className="mt-0.5 shrink-0 text-gold/60" />
+                <span>Archipel 27, 3705 XM Zeist, Netherlands</span>
+              </div>
+              <div className="flex items-center gap-2 text-text-muted text-sm mb-1">
                 <Phone size={14} className="shrink-0 text-gold/60" />
                 <a href="tel:+31685386858" className="hover:text-gold transition-colors">
                   +31 68 538 6858
                 </a>
               </div>
+              <p className="text-text-muted text-xs pl-5">KVK: 82829144</p>
             </div>
             {/* Social */}
             <div className="flex gap-3">

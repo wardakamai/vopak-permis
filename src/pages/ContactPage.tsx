@@ -105,11 +105,21 @@ export default function ContactPage() {
                 <h3 className="font-heading font-bold text-gold text-sm uppercase tracking-widest mb-4">
                   General Tank Speed BV
                 </h3>
-                <div className="flex items-center gap-3">
-                  <Phone size={16} className="text-gold shrink-0" />
-                  <a href="tel:+31685386858" className="text-text-muted text-sm hover:text-gold transition-colors">
-                    +31 68 538 6858
-                  </a>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <MapPin size={16} className="text-gold shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-text-primary text-sm">Archipel 27</p>
+                      <p className="text-text-muted text-sm">3705 XM Zeist, Netherlands</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone size={16} className="text-gold shrink-0" />
+                    <a href="tel:+31685386858" className="text-text-muted text-sm hover:text-gold transition-colors">
+                      +31 68 538 6858
+                    </a>
+                  </div>
+                  <p className="text-text-muted text-sm pl-7">KVK: 82829144</p>
                 </div>
               </div>
 
