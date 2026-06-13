@@ -105,7 +105,7 @@ export default function HomePage() {
     <>
       <SEOHead
         title="Rotterdam Storage Company | Oil Tank Farm & Terminal Rental – TankSpeed Terminals"
-        description="Lease oil storage tanks at our Rotterdam tank farm. Reliable bulk oil & gas storage in Rotterdam, Houston, Jurong & Fujairah. Get a storage quote today."
+        description="Lease oil storage tanks at our Rotterdam tank farm. Reliable bulk oil & gas storage in Rotterdam, Houston, Jurong, Fujairah & Ningbo-Zhoushan. Get a storage quote today."
         keywords="oil tank farm Rotterdam, Rotterdam storage company, rent storage tank Rotterdam, bulk liquid storage Rotterdam, tank terminal leasing Rotterdam, crude oil storage Europe, jet fuel storage terminal Rotterdam, diesel EN 590 bulk storage"
         path="/"
         schema={[organizationSchema, websiteSchema, faqSchema]}

@@ -32,7 +32,7 @@ type Step2 = z.infer<typeof step2Schema>
 type Step3 = z.infer<typeof step3Schema>
 
 const whyUs = [
-  { Icon: Globe, text: 'Four global terminal locations — Rotterdam, Houston, Jurong, Fujairah' },
+  { Icon: Globe, text: 'Five global terminal locations — Rotterdam, Houston, Jurong, Fujairah & Ningbo-Zhoushan' },
   { Icon: Shield, text: 'ISO 9001, ISO 14001, ISO 45001 certified operations' },
   { Icon: Clock, text: '24/7 terminal operations with dedicated client account management' },
   { Icon: Award, text: 'ISPS and ISGOTT compliant — all vessels and products welcome' },

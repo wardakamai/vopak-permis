@@ -100,7 +100,7 @@ export default function VesselCharteringPage() {
                 </p>
                 <p>
                   Our chartering services integrate seamlessly with our terminal storage operations.
-                  Cargoes stored at our Rotterdam, Houston, Jurong, or Fujairah terminals can be
+                  Cargoes stored at our Rotterdam, Houston, Jurong, Fujairah, or Ningbo-Zhoushan terminals can be
                   directly loaded onto chartered vessels from our dedicated berths — eliminating the
                   time and cost of additional lightering or multi-party coordination.
                 </p>

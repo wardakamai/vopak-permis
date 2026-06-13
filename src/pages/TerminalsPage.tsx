@@ -370,7 +370,7 @@ export default function TerminalsPage() {
       <section className="py-20 bg-navy-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="Network Overview" title="At a Glance" center />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
             {terminals.map((t, i) => (
               <motion.button
                 key={t.id}

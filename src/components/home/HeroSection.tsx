@@ -5,7 +5,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react'
 import heroBg from '../../assets/hero-bg.png'
 
 const stats = [
-  { value: 4, suffix: '', label: 'Global Terminals' },
+  { value: 5, suffix: '', label: 'Global Terminals' },
   { value: 2.5, suffix: 'M+ m³', label: 'Storage Capacity' },
   { value: 40, suffix: '+', label: 'Years Experience' },
   { value: 6, suffix: '', label: 'Product Types' },
@@ -75,7 +75,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
           className="section-label mb-6"
         >
-          Port of Rotterdam — Houston — Jurong — Fujairah
+          Port of Rotterdam — Houston — Jurong — Fujairah — Ningbo-Zhoushan
         </motion.p>
 
         <motion.h1
@@ -96,7 +96,7 @@ export default function HeroSection() {
         >
           Vopak Logistics Services Permis &amp; General Tank Speed BV — your trusted joint venture
           for bulk liquid storage, vessel chartering, and freight logistics across Rotterdam,
-          Houston, Jurong, and Fujairah.
+          Houston, Jurong, Fujairah, and Ningbo-Zhoushan (China).
         </motion.p>
 
         <motion.div
