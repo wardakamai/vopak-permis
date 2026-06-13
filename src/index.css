@@ -1,0 +1,243 @@
+/* Font imports must precede @tailwind directives */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/barlow-condensed/400.css';
+@import '@fontsource/barlow-condensed/600.css';
+@import '@fontsource/barlow-condensed/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES — DARK MODE (default)
+   Deep corporate navy + royal blue accent
+   ───────────────────────────────────────────── */
+:root {
+  --color-navy:        11 26 62;       /* #0B1A3E — deep corporate navy */
+  --color-navy-light:  16 35 84;       /* #102354 — rich navy for cards/surfaces */
+  --color-gold:        21 101 192;     /* #1565C0 — corporate royal blue */
+  --color-gold-light:  30 136 229;     /* #1E88E5 — brighter blue */
+  --color-gold-dark:   13 71 161;      /* #0D47A1 — deep blue */
+  --color-steel:       41 121 212;     /* #2979D4 — mid blue */
+  --color-overlay:     7 14 38;        /* #070E26 — always dark for photo heroes */
+  --color-text-primary: 238 242 255;   /* #EEF2FF — cool white */
+  --color-text-muted:  143 168 200;    /* #8FA8C8 — muted blue-grey */
+
+  /* CTABanner section gradient */
+  --cta-bg: linear-gradient(135deg, #0B1A3E 0%, #102354 40%, #1a3a80 70%, #102354 100%);
+  --cta-highlight: linear-gradient(90deg, transparent 0%, rgba(21,101,192,0.15) 50%, transparent 100%);
+}
+
+/* ─────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES — LIGHT MODE
+   Clean white corporate with royal blue accent
+   ───────────────────────────────────────────── */
+.light {
+  --color-navy:        244 247 255;    /* #F4F7FF — off-white blue-tinted bg */
+  --color-navy-light:  255 255 255;    /* #FFFFFF — pure white surfaces */
+  --color-gold:        21 101 192;     /* #1565C0 — same royal blue */
+  --color-gold-light:  30 136 229;     /* #1E88E5 */
+  --color-gold-dark:   13 71 161;      /* #0D47A1 */
+  --color-steel:       41 121 212;     /* #2979D4 */
+  --color-overlay:     7 14 38;        /* always dark for photo heroes */
+  --color-text-primary: 11 26 62;      /* #0B1A3E — deep navy text */
+  --color-text-muted:  74 96 130;      /* #4A6082 */
+
+  --cta-bg: linear-gradient(135deg, #dbeafe 0%, #eff6ff 40%, #c7d9fb 70%, #eff6ff 100%);
+  --cta-highlight: linear-gradient(90deg, transparent 0%, rgba(21,101,192,0.1) 50%, transparent 100%);
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy text-text-primary font-body antialiased;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-gold text-white font-heading font-semibold text-sm uppercase tracking-widest rounded transition-all duration-300;
+    background-image: linear-gradient(135deg, #1565C0 0%, #1E88E5 50%, #0D47A1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgb(var(--color-gold) / 0.3);
+  }
+  .btn-primary:hover {
+    background-position: right center;
+    box-shadow: 0 0 30px rgb(var(--color-gold) / 0.5);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-gold font-heading font-semibold text-sm uppercase tracking-widest rounded transition-all duration-500;
+    border: 1px solid rgb(var(--color-gold) / 0.5);
+    box-shadow: 0 0 8px rgb(var(--color-gold) / 0.08), inset 0 1px 0 rgb(var(--color-gold) / 0.08);
+  }
+  .btn-secondary:hover {
+    @apply bg-gold text-navy;
+    box-shadow: 0 0 18px rgb(var(--color-gold) / 0.4), 0 0 40px rgb(var(--color-gold) / 0.15);
+    transform: translateY(-1px);
+  }
+
+  .section-label {
+    @apply text-gold font-heading font-semibold text-sm uppercase tracking-widest;
+  }
+
+  .section-title {
+    @apply font-heading font-bold text-text-primary;
+  }
+
+  /* ── Futuristic glowing card ── */
+  .card-glass {
+    @apply bg-navy-light rounded-lg;
+    position: relative;
+    border: 1px solid rgb(var(--color-gold) / 0.38);
+    box-shadow:
+      0 0 8px   rgb(var(--color-gold) / 0.10),
+      0 0 20px  rgb(var(--color-gold) / 0.06),
+      0 0 45px  rgb(var(--color-gold) / 0.03),
+      inset 0 1px 0 rgb(var(--color-gold) / 0.10);
+    /* transition for JS-driven glow; transform handled by JS */
+    transition: border-color 0.5s, box-shadow 0.5s;
+  }
+  .card-glass:hover {
+    border-color: rgb(var(--color-gold) / 0.65);
+    box-shadow:
+      0 0 12px  rgb(var(--color-gold) / 0.22),
+      0 0 35px  rgb(var(--color-gold) / 0.13),
+      0 0 70px  rgb(var(--color-gold) / 0.07),
+      0 0 120px rgb(var(--color-gold) / 0.03),
+      inset 0 1px 0 rgb(var(--color-gold) / 0.18);
+  }
+  /* Mouse-tracked spotlight overlay */
+  .card-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at var(--glow-x, 50%) var(--glow-y, 50%),
+      rgb(var(--color-gold) / 0.20) 0%,
+      rgb(var(--color-gold) / 0.08) 40%,
+      transparent 65%
+    );
+    opacity: var(--glow-opacity, 0);
+    pointer-events: none;
+    z-index: 10;
+    transition: opacity 0.25s ease;
+  }
+
+  /* Glow-only class (no background) — apply to any element */
+  .card-glow {
+    position: relative;
+    border: 1px solid rgb(var(--color-gold) / 0.38);
+    box-shadow:
+      0 0 8px   rgb(var(--color-gold) / 0.10),
+      0 0 20px  rgb(var(--color-gold) / 0.06),
+      0 0 45px  rgb(var(--color-gold) / 0.03),
+      inset 0 1px 0 rgb(var(--color-gold) / 0.10);
+    transition: border-color 0.5s, box-shadow 0.5s;
+  }
+  .card-glow:hover {
+    border-color: rgb(var(--color-gold) / 0.65);
+    box-shadow:
+      0 0 12px  rgb(var(--color-gold) / 0.22),
+      0 0 35px  rgb(var(--color-gold) / 0.13),
+      0 0 70px  rgb(var(--color-gold) / 0.07),
+      0 0 120px rgb(var(--color-gold) / 0.03),
+      inset 0 1px 0 rgb(var(--color-gold) / 0.18);
+  }
+  .card-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at var(--glow-x, 50%) var(--glow-y, 50%),
+      rgb(var(--color-gold) / 0.20) 0%,
+      rgb(var(--color-gold) / 0.08) 40%,
+      transparent 65%
+    );
+    opacity: var(--glow-opacity, 0);
+    pointer-events: none;
+    z-index: 10;
+    transition: opacity 0.25s ease;
+  }
+
+  .grain-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    animation: grain 8s steps(10) infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gold-border-bottom {
+    border-bottom: 2px solid rgb(var(--color-gold));
+  }
+
+  .shimmer-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 2.5s infinite;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-navy));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-gold) / 0.27);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-gold));
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-gold));
+  outline-offset: 2px;
+}
