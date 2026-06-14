@@ -97,6 +97,7 @@ export default function ContactPage() {
                       +31 970 102 57780
                     </a>
                   </div>
+                  <p className="text-text-muted text-sm pl-7">KVK: 0874288120</p>
                 </div>
               </div>
 

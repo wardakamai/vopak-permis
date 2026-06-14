@@ -55,12 +55,13 @@ export default function Footer() {
                 <MapPin size={14} className="mt-0.5 shrink-0 text-gold/60" />
                 <span>17 Buraanweg Haven 300, 3195 ZH Rotterdam, Netherlands</span>
               </div>
-              <div className="flex items-center gap-2 text-text-muted text-sm">
+              <div className="flex items-center gap-2 text-text-muted text-sm mb-1">
                 <Phone size={14} className="shrink-0 text-gold/60" />
                 <a href="tel:+3197010257780" className="hover:text-gold transition-colors">
                   +31 970 102 57780
                 </a>
               </div>
+              <p className="text-text-muted text-xs pl-5">KVK: 0874288120</p>
             </div>
             {/* GTS Contact */}
             <div className="mb-6">
